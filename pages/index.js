@@ -5,7 +5,7 @@ import Container from '@mui/material/Container';
 export default function Index() {
 
     return (
-        <Container sx={{background: '#eee'}} maxWidth="xl">
+        <Container sx={{minHeight: '100vh'}} maxWidth="xxl">
             sfsdfsf
         </Container>
     );

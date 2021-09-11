@@ -9,7 +9,7 @@ import {
     // ListItemButton,
     // ListItemText,
     Stack,
-    Toolbar
+    Toolbar, useTheme
 } from "@mui/material";
 import OutlinedSecondaryButton from "../common/OutlinedSecondaryButton";
 import DehazeIcon from '@mui/icons-material/Dehaze';
@@ -26,6 +26,8 @@ const Header = () => {
     const drawerToggler = () => {
         setIsDrawerOpen(prevState => !prevState);
     }
+
+    const theme = useTheme();
 
     return (
         <div>
@@ -165,6 +167,14 @@ const Header = () => {
                     <Divider/>
                 </Box>
             </Drawer>
+
+        {/*     Header Bottom Spacing*/}
+            <Box sx={{
+                ...theme.mixins.toolbar,
+                '@media (min-width: 0px) and (orientation: landscape)': {
+                    minHeight: '64px',
+                }
+            }}/>
 
         </div>
     );
