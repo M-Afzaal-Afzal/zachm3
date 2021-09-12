@@ -15,6 +15,7 @@ const IntroSection = () => {
                     maxWidth: '50rem',
                     py: '6rem',
                 }}
+                heading={'Fang Who?!'}
                 description={[
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur delectus dicta dolor dolorem, doloribus error esse molestiae nulla pariatur quae quidem rerum tempora temporibus vel veniam. Adipisci dolorem libero molestiae.',
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur delectus dicta dolor dolorem, doloribus error esse molestiae nulla pariatur quae quidem rerum tempora temporibus vel veniam. Adipisci dolorem libero molestiae.',

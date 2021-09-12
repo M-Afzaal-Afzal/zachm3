@@ -1,14 +1,14 @@
 import React from 'react';
 import {Box, Typography} from "@mui/material";
 
-const HeadingWithDescription = ({description,...props}) => {
+const HeadingWithDescription = ({description,heading, headingLeft, ...props}) => {
     return (
         <Box {...props}>
             <Typography fontWeight={'bold'} mb={'1.5rem'}
-                        textAlign={'center'}
+                        textAlign={headingLeft ? 'left' : 'center'}
                         variant={'h1'}
             >
-                Fang Who?!
+                {heading}
             </Typography>
             {
                 description.map(desc => (
