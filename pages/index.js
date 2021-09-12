@@ -5,6 +5,7 @@ import ImagesSection from "../src/components/home/ImagesSection";
 import IntroSection from "../src/components/home/IntroSection";
 import RoadmapSection from "../src/components/home/RoadmapSection";
 import RaritySection from "../src/components/home/RaritySection";
+import GiveBackSection from "../src/components/home/GiveBackSection";
 // import {AppBar, Box, Stack, Toolbar} from "@mui/material";
 
 export default function Index() {
@@ -26,6 +27,10 @@ export default function Index() {
             </Box>
             <Box>
                 <RaritySection/>
+            </Box>
+
+            <Box>
+                <GiveBackSection/>
             </Box>
 
         </Box>
