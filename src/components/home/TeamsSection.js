@@ -45,7 +45,7 @@ const TeamsSection = () => {
     ]
 
     return (
-        <Box sx={{
+        <Box id={'team'} sx={{
             background: (theme) => theme.palette.secondary.main,
             py: '6rem',
         }}>

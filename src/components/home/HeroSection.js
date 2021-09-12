@@ -3,7 +3,7 @@ import {Box, Button, Container, Grid, Typography} from "@mui/material";
 
 const HeroSection = () => {
     return (
-        <Box sx={{
+        <Box id={'about'} sx={{
             minHeight: '90vh',
             background: (theme) => theme.palette.primary.main,
             display: 'grid', placeContent: 'center'

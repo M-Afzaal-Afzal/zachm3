@@ -3,7 +3,7 @@ import {Button} from "@mui/material";
 
 const DrawerOutlinedButton = React.forwardRef(({children,...props},ref) => {
     return (
-        <Button ref={ref} size={'large'} fullWidth>
+        <Button ref={ref} size={'large'} fullWidth {...props}>
             {children}
         </Button>
     );

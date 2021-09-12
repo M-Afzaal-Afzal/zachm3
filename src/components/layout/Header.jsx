@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
     AppBar,
     Box,
@@ -21,10 +21,50 @@ import DrawerOutlinedButton from "../common/DrawerOutlinedButton";
 
 const Header = () => {
 
+    const [itemToNavigate,setItemToNavigate] = useState(null);
+
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+    const links = [
+        {
+            id: '1',
+            text: 'About',
+        },
+        {
+            id: '2',
+            text: 'roadmap',
+        },
+        {
+            id: '3',
+            text: 'rarity',
+        },
+        {
+            id: '4',
+            text: 'faq',
+        }, {
+            id: '5',
+            text: 'team',
+        },
+
+
+    ]
 
     const drawerToggler = () => {
         setIsDrawerOpen(prevState => !prevState);
+    }
+
+    useEffect(() => {
+        if (itemToNavigate) {
+            document.getElementById(itemToNavigate.toString()).scrollIntoView({
+                behavior: 'smooth',
+            })
+        }
+    },[itemToNavigate])
+
+
+    const linkClickHandler = (e) => {
+        const elementId = e.target.innerText.toLowerCase();
+        setItemToNavigate(elementId)
     }
 
     const theme = useTheme();
@@ -53,21 +93,14 @@ const Header = () => {
                                     lg: 'block',
                                 }
                             }} direction={'row'} spacing={1}>
-                                <OutlinedSecondaryButton>
-                                    About
-                                </OutlinedSecondaryButton>
-                                <OutlinedSecondaryButton>
-                                    Roadmap
-                                </OutlinedSecondaryButton>
-                                <OutlinedSecondaryButton>
-                                    Rarity
-                                </OutlinedSecondaryButton>
-                                <OutlinedSecondaryButton>
-                                    Faq
-                                </OutlinedSecondaryButton>
-                                <OutlinedSecondaryButton>
-                                    Team
-                                </OutlinedSecondaryButton>
+                                {
+                                    links.map(link => (
+                                        <OutlinedSecondaryButton key={link.id} onClick={linkClickHandler}>
+                                            {link.text}
+                                        </OutlinedSecondaryButton>
+                                    ))
+                                }
+
                             </Stack>
 
                             {/*    Right Icons*/}
@@ -141,34 +174,22 @@ const Header = () => {
                     </Box>
 
                     <Divider/>
-                    <DrawerOutlinedButton size={'large'} fullWidth>
-                        About
-                    </DrawerOutlinedButton>
-                    <Divider/>
 
-                    <DrawerOutlinedButton aria-selected={true} fullWidth>
-                        Roadmap
-                    </DrawerOutlinedButton>
-                    <Divider/>
+                    {
+                        links.map(({text, id}) => (
+                            <Box key={id}>
+                                <DrawerOutlinedButton onClick={linkClickHandler} size={'large'} fullWidth>
+                                    {text}
+                                </DrawerOutlinedButton>
+                                <Divider/>
+                            </Box>
+                        ))
+                    }
 
-                    <DrawerOutlinedButton aria-selected={true} fullWidth>
-                        Rarity
-                    </DrawerOutlinedButton>
-                    <Divider/>
-
-                    <DrawerOutlinedButton aria-selected={true} fullWidth>
-                        Faq
-                    </DrawerOutlinedButton>
-                    <Divider/>
-
-                    <DrawerOutlinedButton aria-selected={true} fullWidth>
-                        Team
-                    </DrawerOutlinedButton>
-                    <Divider/>
                 </Box>
             </Drawer>
 
-        {/*     Header Bottom Spacing*/}
+            {/*     Header Bottom Spacing*/}
             <Box sx={{
                 ...theme.mixins.toolbar,
                 '@media (min-width: 0px) and (orientation: landscape)': {

@@ -5,7 +5,7 @@ import HeadingWithDescription from "../common/HeadingWithDescription";
 
 const RoadmapSection = () => {
     return (
-        <Box py={'6rem'} sx={{
+        <Box id={'roadmap'} py={'6rem'} sx={{
             background: (theme) => theme.palette.primary.main,
         }}
         >
