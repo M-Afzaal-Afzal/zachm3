@@ -6,6 +6,8 @@ import IntroSection from "../src/components/home/IntroSection";
 import RoadmapSection from "../src/components/home/RoadmapSection";
 import RaritySection from "../src/components/home/RaritySection";
 import GiveBackSection from "../src/components/home/GiveBackSection";
+import MerchStoreSection from "../src/components/home/MerchStoreSection";
+import FaqSection from "../src/components/home/FaqSection";
 // import {AppBar, Box, Stack, Toolbar} from "@mui/material";
 
 export default function Index() {
@@ -31,6 +33,14 @@ export default function Index() {
 
             <Box>
                 <GiveBackSection/>
+            </Box>
+
+            <Box>
+                <MerchStoreSection/>
+            </Box>
+
+            <Box>
+                <FaqSection/>
             </Box>
 
         </Box>
