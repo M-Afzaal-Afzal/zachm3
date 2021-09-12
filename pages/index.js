@@ -1,12 +1,17 @@
 import * as React from 'react';
-import Container from '@mui/material/Container';
+import {Box} from "@mui/material";
+import HeroSection from "../src/components/home/HeroSection";
+import ImagesSection from "../src/components/home/ImagesSection";
 // import {AppBar, Box, Stack, Toolbar} from "@mui/material";
 
 export default function Index() {
 
     return (
-        <Container sx={{minHeight: '100vh'}} maxWidth="xxl">
-            sfsdfsf
-        </Container>
+        <Box>
+            <HeroSection/>
+            <Box sx={{background: (theme) => theme.palette.primary.main}} py={'3rem'}>
+                <ImagesSection/>
+            </Box>
+        </Box>
     );
 }
