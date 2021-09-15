@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const TeamCard = ({imgSrc,name, description, isWanted}) => {
     return (
-        <Card sx={{maxWidth: 300}}>
+        <Card sx={{maxWidth: 300,position: 'relative'}}>
             <CardContent>
                 <Box
                     sx={{
