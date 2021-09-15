@@ -116,19 +116,19 @@ const Header = () => {
                                     <IconButton sx={{
                                         color: '#fff'
                                     }}>
-                                        <FacebookIcon fontSize={'medium'}/>
+                                        <FacebookIcon fontSize={'large'}/>
                                     </IconButton>
 
                                     <IconButton sx={{
                                         color: '#fff'
                                     }}>
-                                        <InstagramIcon fontSize={'medium'}/>
+                                        <InstagramIcon fontSize={'large'}/>
                                     </IconButton>
 
                                     <IconButton sx={{
                                         color: '#fff'
                                     }}>
-                                        <TwitterIcon fontSize={'medium'}/>
+                                        <TwitterIcon fontSize={'large'}/>
                                     </IconButton>
 
                                 </Stack>

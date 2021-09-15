@@ -1,9 +1,12 @@
 import React from 'react';
 import {Box, Typography} from "@mui/material";
 
-const HeadingWithDescription = ({description,heading, headingLeft, ...props}) => {
+const HeadingWithDescription = ({description,heading, sx, headingLeft, ...props}) => {
     return (
-        <Box {...props}>
+        <Box sx={{
+            zIndex: 10,
+            ...sx,
+        }} {...props}>
             <Typography fontWeight={'bold'} mb={'1.5rem'}
                         textAlign={headingLeft ? 'left' : 'center'}
                         variant={'h1'}

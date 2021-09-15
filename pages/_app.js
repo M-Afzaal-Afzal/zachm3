@@ -11,6 +11,7 @@ import Footer from "../src/components/layout/Footer";
 import "swiper/css";
 import "swiper/css/pagination";
 import "../src/styles/swiper.css";
+import '../src/styles/global.css';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();

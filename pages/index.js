@@ -16,12 +16,11 @@ export default function Index() {
     return (
         <Box>
             <HeroSection/>
-            <Box sx={{background: (theme) => theme.palette.primary.main}} pt={'3rem'}>
-                <ImagesSection/>
-            </Box>
+
             <Box>
                 <IntroSection/>
             </Box>
+
             <Box>
                 <ImagesSection/>
             </Box>

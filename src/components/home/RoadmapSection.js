@@ -2,14 +2,23 @@ import React from 'react';
 import {Box, Container, Grid} from "@mui/material";
 import StepWithDescription from "../common/StepWithDescription";
 import HeadingWithDescription from "../common/HeadingWithDescription";
+import Image from "next/image";
 
 const RoadmapSection = () => {
     return (
-        <Box id={'roadmap'} py={'6rem'} sx={{
-            background: (theme) => theme.palette.primary.main,
-        }}
-        >
-            <Container maxWidth={'xxl'}>
+        <Box sx={{
+            position: 'relative',
+        }}>
+
+            <Image src={'/home/bg/3.png'}
+                   layout={'fill'}
+                   objectFit={'cover'}
+            />
+
+            <Box id={'roadmap'} py={'6rem'} sx={{
+                background: (theme) => theme.palette.primary.main,
+            }}
+            >
                 <Container maxWidth={'xxl'}>
                     <Box>
                         <Grid container spacing={6}>
@@ -19,7 +28,7 @@ const RoadmapSection = () => {
                                     <HeadingWithDescription
                                         heading={'Roadmap'}
                                         headingLeft={true}
-                                        sx={{color: '#fff'}}
+                                        sx={{color: '#fff', position: 'relative'}}
                                         description={[
                                             'A lot of our plans are long term, so they will happen repeatedly and along the way, while we build the community and grow together. Collaborations is one of the wildest perks. Happening through exclusive airdrops for holders or special pieces auctioned within the collection, these will make Fang Gang connect with big names in the NFT community such as:',
                                             'PixelHans, dubbed the \'Son of NFTs\'; FatBaby, supreme artist extraordinaire; and CryptoPervs, OG of the pervy pixels.',
@@ -30,7 +39,7 @@ const RoadmapSection = () => {
                             </Grid>
 
                             <Grid item xs={12} xl={6} sx={{
-
+                                zIndex: 10,
                                 mt: {
                                     xs: '2rem',
                                     xl: 0,
@@ -66,7 +75,7 @@ const RoadmapSection = () => {
                         </Grid>
                     </Box>
                 </Container>
-            </Container>
+            </Box>
         </Box>
     );
 };

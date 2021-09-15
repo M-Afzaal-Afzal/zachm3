@@ -6,9 +6,19 @@ import RarityImageSection from "./RarityImageSection";
 
 const RaritySection = () => {
     return (
-        <Box id={'rarity'} py={'6rem'} sx={{
-            background: (theme)=> theme.palette.secondary.main,
+
+        <Box sx={{
+            position: 'relative',
         }}>
+
+            <Image src={'/home/bg/4.png'}
+                   layout={'fill'}
+                   objectFit={'cover'}
+            />
+
+            <Box id={'rarity'} py={'6rem'} sx={{
+                background: (theme) => theme.palette.secondary.main,
+            }}>
 
 
                 <Container maxWidth={'xxl'}>
@@ -16,7 +26,7 @@ const RaritySection = () => {
                         <Grid container spacing={6}>
                             <Grid item xs={12} xl={6}>
                                 <Box sx={{
-                                    width:'100%',
+                                    width: '100%',
                                     position: 'relative',
                                     // height: '10rem',
                                     minHeight: '30rem',
@@ -24,7 +34,7 @@ const RaritySection = () => {
                                 }}>
                                     <Image src={'/home/rarity_special.png'}
                                            layout={'fill'}
-                                            objectFit={'contain'}
+                                           objectFit={'contain'}
                                     />
                                 </Box>
                             </Grid>
@@ -60,6 +70,7 @@ const RaritySection = () => {
 
                 </Container>
 
+            </Box>
         </Box>
     );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import {Box, Container, Grid} from "@mui/material";
 import TeamCard from "./TeamCard";
+import Image from "next/image";
 
 
 const TeamsSection = () => {
@@ -45,37 +46,44 @@ const TeamsSection = () => {
     ]
 
     return (
-        <Box id={'team'} sx={{
-            background: (theme) => theme.palette.secondary.main,
-            py: '6rem',
+        <Box sx={{
+            position: 'relative',
         }}>
-            <Container maxWidth={'xxl'}>
 
-                <Grid
-                    container
-                    direction="row"
-                    justifyContent="center"
-                    alignItems="center"
-                    spacing={2}
-                >
-                    {
-                        temaData.map(({name, description, imgSrc, isWanted}) => (
-                            <Grid xs={12} md={6} lg={4} xl={3} item>
-                                <Box display={'grid'} justifyContent={'center'}>
-                                    <TeamCard
-                                        name={name}
-                                        imgSrc={imgSrc}
-                                        description={description}
-                                        isWanted={isWanted}
-                                    />
-                                </Box>
-                            </Grid>
-                        ))
-                    }
+            <Image src={'/home/bg/4.png'} layout={'fill'} objectFit={'cover'}/>
 
-                </Grid>
+            <Box id={'team'} sx={{
+                background: (theme) => theme.palette.secondary.main,
+                py: '6rem',
+            }}>
+                <Container maxWidth={'xxl'}>
 
-            </Container>
+                    <Grid
+                        container
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center"
+                        spacing={2}
+                    >
+                        {
+                            temaData.map(({name, description, imgSrc, isWanted}) => (
+                                <Grid key={name} xs={12} md={6} lg={4} xl={3} item>
+                                    <Box display={'grid'} justifyContent={'center'}>
+                                        <TeamCard
+                                            name={name}
+                                            imgSrc={imgSrc}
+                                            description={description}
+                                            isWanted={isWanted}
+                                        />
+                                    </Box>
+                                </Grid>
+                            ))
+                        }
+
+                    </Grid>
+
+                </Container>
+            </Box>
         </Box>
     );
 };
