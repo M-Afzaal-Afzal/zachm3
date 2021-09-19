@@ -2,9 +2,19 @@ import React from 'react';
 import {Box, Card, CardContent, Chip, Divider, Stack, Typography} from "@mui/material";
 import Image from "next/image";
 
-const TeamCard = ({imgSrc,name, description, isWanted}) => {
+const TeamCard = ({imgSrc, name, description, isWanted}) => {
     return (
-        <Card sx={{maxWidth: 300,position: 'relative'}}>
+        <Card sx={{
+            maxWidth: 300,
+            position: 'relative',
+            transition: "all .3s linear",
+            backfaceVisibility: 'hidden',
+            '&:hover': {
+                transform: 'scale(1.03)',
+                backfaceVisibility: 'hidden',
+                cursor: 'pointer',
+            }
+        }}>
             <CardContent>
                 <Box
                     sx={{

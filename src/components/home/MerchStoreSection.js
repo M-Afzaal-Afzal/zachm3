@@ -8,7 +8,7 @@ const MerchStoreSection = () => {
 
 
             <Box py={'6rem'} sx={{
-                background: theme => theme.palette.secondary.main,
+                background: theme => theme.palette.grey.main,
             }}>
                 <Container maxWidth={'xxl'}>
                     <Box>

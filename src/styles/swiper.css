@@ -10,6 +10,7 @@
     border: 3px solid #262022;
     /*background: #fff;*/
 
+
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
@@ -23,6 +24,7 @@
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+    transition: all .3s linear;
 }
 
 .swiper-slide img {
@@ -30,6 +32,12 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.swiper-slide:hover {
+    transform: scale(1.03);
+    backface-visibility: hidden;
+    cursor: pointer;
 }
 
 .swiper-slide {

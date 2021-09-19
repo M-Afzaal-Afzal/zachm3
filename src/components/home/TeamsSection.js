@@ -47,9 +47,8 @@ const TeamsSection = () => {
 
     return (
 
-
             <Box id={'team'} sx={{
-                background: (theme) => theme.palette.secondary.main,
+                background: (theme) => theme.palette.grey.main,
                 py: '6rem',
             }}>
                 <Container maxWidth={'xxl'}>
