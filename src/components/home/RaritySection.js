@@ -6,16 +6,6 @@ import RarityImageSection from "./RarityImageSection";
 
 const RaritySection = () => {
     return (
-
-        <Box sx={{
-            position: 'relative',
-        }}>
-
-            <Image src={'/home/bg/4.png'}
-                   layout={'fill'}
-                   objectFit={'cover'}
-            />
-
             <Box id={'rarity'} py={'6rem'} sx={{
                 background: (theme) => theme.palette.secondary.main,
             }}>
@@ -67,10 +57,7 @@ const RaritySection = () => {
                     <Box py={'4rem'}>
                         <RarityImageSection/>
                     </Box>
-
                 </Container>
-
-            </Box>
         </Box>
     );
 };

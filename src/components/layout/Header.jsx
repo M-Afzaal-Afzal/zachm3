@@ -18,10 +18,11 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 // import {List} from "@mui/icons-material";
 import DrawerOutlinedButton from "../common/DrawerOutlinedButton";
+import Image from 'next/image';
 
 const Header = () => {
 
-    const [itemToNavigate,setItemToNavigate] = useState(null);
+    const [itemToNavigate, setItemToNavigate] = useState(null);
 
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
@@ -59,7 +60,7 @@ const Header = () => {
                 behavior: 'smooth',
             })
         }
-    },[itemToNavigate])
+    }, [itemToNavigate])
 
 
     const linkClickHandler = (e) => {
@@ -71,7 +72,9 @@ const Header = () => {
 
     return (
         <div>
-            <AppBar>
+            <AppBar elevation={2} sx={{
+                background: "#6950d0",
+            }}>
                 <Container maxWidth={'xxl'} disableGutters>
 
                     <Toolbar>
@@ -79,28 +82,44 @@ const Header = () => {
                             width: '100%',
                             alignItems: 'center',
                             justifyContent: 'space-between',
+                            display: 'flex',
                         }}
                                direction={'row'} component={'header'}
                         >
+
                             {/*Left Icons*/}
-                            <Box fontSize={'1.5rem'}>
-                                Logo
-                            </Box>
+                            <Stack direction={'row'} spacing={2}>
+                                {/* Logo */}
+                                <Box>
+                                    <Box pr={2} sx={{
+                                        '& div': {
+                                            maxWidth: '8rem !important',
+                                            display: 'inline-block',
+                                        }
+                                    }}>
+                                        <Image priority layout={'intrinsic'} src={'/logo.png'} width={3840}
+                                               height={2160}/>
+                                    </Box>
+                                </Box>
 
-                            <Stack sx={{
-                                display: {
-                                    xs: 'none',
-                                    lg: 'block',
-                                }
-                            }} direction={'row'} spacing={1}>
-                                {
-                                    links.map(link => (
-                                        <OutlinedSecondaryButton key={link.id} onClick={linkClickHandler}>
-                                            {link.text}
-                                        </OutlinedSecondaryButton>
-                                    ))
-                                }
 
+                                <Stack sx={{
+                                    display: {
+                                        xs: 'none',
+                                        xl: 'flex',
+                                        alignItems: 'center',
+                                    }
+                                }} direction={'row'} spacing={1}>
+
+                                    {
+                                        links.map(link => (
+                                            <OutlinedSecondaryButton key={link.id} onClick={linkClickHandler}>
+                                                {link.text}
+                                            </OutlinedSecondaryButton>
+                                        ))
+                                    }
+
+                                </Stack>
                             </Stack>
 
                             {/*    Right Icons*/}
@@ -110,7 +129,7 @@ const Header = () => {
                                 <Stack sx={{
                                     display: {
                                         xs: 'none',
-                                        lg: 'block',
+                                        xl: 'block',
                                     }
                                 }} direction={'row'} spacing={.5}>
                                     <IconButton sx={{
@@ -136,7 +155,7 @@ const Header = () => {
                                 <Box sx={{
                                     display: {
                                         xs: 'block',
-                                        lg: 'none',
+                                        xl: 'none',
                                     }
                                 }}>
                                     <IconButton onClick={drawerToggler} sx={{color: '#fff'}}>

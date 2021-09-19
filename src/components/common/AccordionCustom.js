@@ -2,12 +2,16 @@ import React from 'react';
 import {Accordion, AccordionDetails, AccordionSummary, Typography} from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-const AccordionCustom = ({heading,description}) => {
+const AccordionCustom = ({heading, description}) => {
     return (
         <Accordion sx={{
-            // '&.Mui-expanded': {
-            //     margin: 0
-            // }
+            '&.Mui-expanded': {
+                background: '#ed9419',
+                margin: 0,
+            },
+            background: '#262022',
+            color: '#fff',
+            my: '8px',
         }}>
             <AccordionSummary
                 expandIcon={<ExpandMoreIcon/>}
@@ -18,7 +22,11 @@ const AccordionCustom = ({heading,description}) => {
                     {heading}
                 </Typography>
             </AccordionSummary>
-            <AccordionDetails>
+
+            <AccordionDetails sx={{
+                background: '#fff',
+                color: 'black',
+            }}>
 
                 {
                     description.map(desc => (

@@ -1,16 +1,10 @@
 import React from 'react';
 import {Box, Container} from "@mui/material";
 import HeadingWithDescription from "../common/HeadingWithDescription";
-import Image from "next/image";
+// import Image from "next/image";
 
 const GiveBackSection = () => {
     return (
-
-        <Box sx={{
-            position: 'relative',
-        }}>
-
-            <Image src={'/home/bg/1.png'} layout={'fill'} objectFit={'cover'}/>
 
 
             <Box sx={{
@@ -37,7 +31,7 @@ const GiveBackSection = () => {
                     />
                 </Container>
             </Box>
-        </Box>
+
     );
 };
 

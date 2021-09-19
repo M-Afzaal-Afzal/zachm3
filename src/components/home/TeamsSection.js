@@ -1,7 +1,7 @@
 import React from 'react';
 import {Box, Container, Grid} from "@mui/material";
 import TeamCard from "./TeamCard";
-import Image from "next/image";
+// import Image from "next/image";
 
 
 const TeamsSection = () => {
@@ -46,11 +46,7 @@ const TeamsSection = () => {
     ]
 
     return (
-        <Box sx={{
-            position: 'relative',
-        }}>
 
-            <Image src={'/home/bg/4.png'} layout={'fill'} objectFit={'cover'}/>
 
             <Box id={'team'} sx={{
                 background: (theme) => theme.palette.secondary.main,
@@ -83,7 +79,7 @@ const TeamsSection = () => {
                     </Grid>
 
                 </Container>
-            </Box>
+
         </Box>
     );
 };

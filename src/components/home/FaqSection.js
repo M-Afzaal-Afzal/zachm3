@@ -1,16 +1,12 @@
 import React from 'react';
 import {Box, Container, Typography} from "@mui/material";
 import AccordionCustom from "../common/AccordionCustom";
-import Image from "next/image";
+// import Image from "next/image";
 
 const FaqSection = () => {
 
     return (
-        <Box sx={{
-            position: 'relative',
-        }}>
 
-            <Image src={'/home/bg/3.png'} layout={'fill'} objectFit={'cover'}/>
 
             <Box
                 py={'6rem'}
@@ -88,7 +84,7 @@ const FaqSection = () => {
 
                 </Container>
             </Box>
-        </Box>
+
     );
 };
 

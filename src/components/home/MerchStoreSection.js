@@ -5,11 +5,7 @@ import HeadingWithDescription from "../common/HeadingWithDescription";
 
 const MerchStoreSection = () => {
     return (
-        <Box sx={{
-            position: 'relative',
-        }}>
 
-            <Image src={'/home/bg/2.png'} layout={'fill'} objectFit={'cover'}/>
 
             <Box py={'6rem'} sx={{
                 background: theme => theme.palette.secondary.main,
@@ -66,7 +62,7 @@ const MerchStoreSection = () => {
                     </Box>
                 </Container>
             </Box>
-        </Box>
+
     );
 };
 

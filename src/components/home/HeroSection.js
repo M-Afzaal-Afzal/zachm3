@@ -1,6 +1,6 @@
 import React from 'react';
-import {Box, Button, Container, Grid, Typography} from "@mui/material";
-import Image from 'next/image';
+import {Box, Button, Container, Grid} from "@mui/material";
+// import Image from 'next/image';
 import ImagesSection from "./ImagesSection";
 import Countdown from 'react-countdown';
 import CountdownRenderer from './CountdownRenderer';
@@ -11,13 +11,10 @@ const HeroSection = () => {
             position: 'relative',
         }}>
 
-            <Image src={'/home/bg/1.png'}
-                   layout={'fill'}
-                   objectFit={'cover'}
-            />
+
 
             <Box id={'about'} sx={{
-                minHeight: '90vh',
+                minHeight: '95vh',
                 background: (theme) => theme.palette.primary.main,
                 display: 'grid', placeContent: 'center',
             }}>
@@ -29,8 +26,8 @@ const HeroSection = () => {
                     <Box>
                         <Grid container spacing={6}>
                             <Grid item xs={12} xl={6}>
-                                <Box>
-                                    <video width={'100%'} height={'90%'} playsInline={true} autoPlay={true} loop={true}>
+                                <Box sx={{textAlign: 'center'}}>
+                                    <video style={{maxWidth: '30rem',margin: '0 auto'}} width={'100%'} height={'90%'} playsInline={true} autoPlay={true} loop={true}>
                                         <source src="https://fanggang.io/video/hero.mp4" type="video/mp4"/>
                                     </video>
                                 </Box>
@@ -47,32 +44,32 @@ const HeroSection = () => {
                             }}>
                                 <Box sx={{display: 'grid', placeContent: 'center', height: '100%'}}>
 
-                                    <Typography sx={{
-                                        textAlign: {
-                                            xs: 'center',
-                                            xl: 'left',
-                                        },
-                                        mb: '1rem',
-                                    }} textAlign={'left'} fontWeight={'bold'} color={'#fff'}
-                                                variant={'h1'}
-                                    >
-                                        Fang Gang
-                                    </Typography>
+                                    {/*<Typography sx={{*/}
+                                    {/*    textAlign: {*/}
+                                    {/*        xs: 'center',*/}
+                                    {/*        xl: 'left',*/}
+                                    {/*    },*/}
+                                    {/*    mb: '1rem',*/}
+                                    {/*}} textAlign={'left'} fontWeight={'bold'} color={'#fff'}*/}
+                                    {/*            variant={'h1'}*/}
+                                    {/*>*/}
+                                    {/*    Fang Gang*/}
+                                    {/*</Typography>*/}
 
-                                    <Typography sx={{
-                                        textAlign: {
-                                            xs: 'center',
-                                            xl: 'left',
-                                        },
-                                        mb: '1rem',
-                                    }} color={'#fff'} variant={'body1'}
-                                    >
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus
-                                        consectetur
-                                        consequuntur distinctio dolor dolorem eius et incidunt inventore ipsam magnam
-                                        maxime
-                                        obcaecati, quam quibusdam, quis repellat sequi sunt, voluptas.
-                                    </Typography>
+                                    {/*<Typography sx={{*/}
+                                    {/*    textAlign: {*/}
+                                    {/*        xs: 'center',*/}
+                                    {/*        xl: 'left',*/}
+                                    {/*    },*/}
+                                    {/*    mb: '1rem',*/}
+                                    {/*}} color={'#fff'} variant={'body1'}*/}
+                                    {/*>*/}
+                                    {/*    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus*/}
+                                    {/*    consectetur*/}
+                                    {/*    consequuntur distinctio dolor dolorem eius et incidunt inventore ipsam magnam*/}
+                                    {/*    maxime*/}
+                                    {/*    obcaecati, quam quibusdam, quis repellat sequi sunt, voluptas.*/}
+                                    {/*</Typography>*/}
 
                                     <Box
                                         sx={{
@@ -95,7 +92,12 @@ const HeroSection = () => {
                                                 mt: '2rem',
                                             }
                                         }}>
-                                            <Button fullWidth variant={'contained'} color={'secondary'}>
+                                            <Button fullWidth variant={'contained'} sx={{
+                                                background:"#444",
+                                                '&:hover': {
+                                                    background: '#444',
+                                                }
+                                            }}>
                                                 Connect
                                             </Button>
                                         </Box>

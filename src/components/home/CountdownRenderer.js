@@ -1,5 +1,5 @@
 import {Box, Stack} from "@mui/material";
-import {zeroPad} from "react-countdown";
+// import {zeroPad} from "react-countdown";
 
 
 const CountdownRenderer = ({days, hours, minutes, seconds, completed}) => {
@@ -20,7 +20,7 @@ const CountdownRenderer = ({days, hours, minutes, seconds, completed}) => {
                sx={{
                    color: "#fff",
                    mx: 'auto',
-                   // fontWeight: 'bold',
+                   fontWeight: 'normal',
                     justifyContent: {
                        xs: 'center',
                         'xl': 'space-between',
@@ -31,11 +31,11 @@ const CountdownRenderer = ({days, hours, minutes, seconds, completed}) => {
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
-                    alignItems: 'center'
+                    alignItems: 'center',
                 }}
             >
                 <span>
-                    {zeroPad(days)}
+                    {(days)}
                 </span>
                 <span>
                     DAYS
@@ -52,7 +52,7 @@ const CountdownRenderer = ({days, hours, minutes, seconds, completed}) => {
                 }}
             >
                 <span>
-                    {zeroPad(hours)}
+                    {(hours)}
                 </span>
                 <span>
                     HRS
@@ -69,7 +69,7 @@ const CountdownRenderer = ({days, hours, minutes, seconds, completed}) => {
                 }}
             >
                 <span>
-                    {zeroPad(minutes)}
+                    {(minutes)}
                 </span>
                 <span>
                     MIN
@@ -86,7 +86,7 @@ const CountdownRenderer = ({days, hours, minutes, seconds, completed}) => {
                 }}
             >
                 <span>
-                    {zeroPad(seconds)}
+                    {(seconds)}
                 </span>
                 <span>
                     SEC
@@ -114,7 +114,7 @@ const CountdownRenderer = ({days, hours, minutes, seconds, completed}) => {
                         flexDirection: 'column',
                         alignItems: 'center',
                         width: '110%',
-                        background: '#c6fd0e',
+                        background: '#444',
                         borderRadius:'8px',
                     }}
                 >
@@ -129,7 +129,7 @@ const CountdownRenderer = ({days, hours, minutes, seconds, completed}) => {
                         flexDirection: 'column',
                         alignItems: 'center',
                         width: '25%',
-                        background: '#c6fd0e',
+                        background: '#444',
                         borderRadius:'8px',
                     }}
                 >
