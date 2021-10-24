@@ -7,9 +7,10 @@
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    border: 3px solid #262022;
+    /*border: 3px solid #262022;*/
     /*background: #fff;*/
-
+    /*margin: 8px;*/
+    /*padding: 8px;*/
 
     /* Center slide text vertically */
     display: -webkit-box;
@@ -41,7 +42,7 @@
 }
 
 .swiper-slide {
-    width: auto !important;
+    /*width: auto !important;*/
 }
 
 /*.swiper-slide:nth-child(2n) {*/

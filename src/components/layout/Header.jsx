@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {
     AppBar,
-    Box,
+    Box, Button,
     Container, Divider,
     Drawer,
     IconButton,
@@ -97,8 +97,9 @@ const Header = () => {
                                             display: 'inline-block',
                                         }
                                     }}>
-                                        <Image priority layout={'intrinsic'} src={'/logo.png'} width={3840}
-                                               height={2160}/>
+                                        {/*<Image priority layout={'intrinsic'} src={'/logo.png'} width={3840}*/}
+                                        {/*       height={2160}/>*/}
+                                        Logo
                                     </Box>
                                 </Box>
 
@@ -132,23 +133,26 @@ const Header = () => {
                                         xl: 'block',
                                     }
                                 }} direction={'row'} spacing={.5}>
-                                    <IconButton sx={{
-                                        color: '#fff'
-                                    }}>
-                                        <FacebookIcon fontSize={'large'}/>
-                                    </IconButton>
+                                    <Button variant={'contained'} color={'secondary'}>
+                                        Connect to wallet
+                                    </Button>
+                                    {/*<IconButton sx={{*/}
+                                    {/*    color: '#fff'*/}
+                                    {/*}}>*/}
+                                    {/*    <FacebookIcon fontSize={'large'}/>*/}
+                                    {/*</IconButton>*/}
 
-                                    <IconButton sx={{
-                                        color: '#fff'
-                                    }}>
-                                        <InstagramIcon fontSize={'large'}/>
-                                    </IconButton>
+                                    {/*<IconButton sx={{*/}
+                                    {/*    color: '#fff'*/}
+                                    {/*}}>*/}
+                                    {/*    <InstagramIcon fontSize={'large'}/>*/}
+                                    {/*</IconButton>*/}
 
-                                    <IconButton sx={{
-                                        color: '#fff'
-                                    }}>
-                                        <TwitterIcon fontSize={'large'}/>
-                                    </IconButton>
+                                    {/*<IconButton sx={{*/}
+                                    {/*    color: '#fff'*/}
+                                    {/*}}>*/}
+                                    {/*    <TwitterIcon fontSize={'large'}/>*/}
+                                    {/*</IconButton>*/}
 
                                 </Stack>
 

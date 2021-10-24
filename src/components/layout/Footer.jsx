@@ -13,7 +13,7 @@ const Footer = () => {
                 <Stack alignItems={'center'} direction={'row'} justifyContent={'space-between'} height={'70px'}>
                     {/* Left Side*/}
                     <Box sx={{color: '#fff'}}>
-                        2021 Fangsters
+                        2021 Company Name
                     </Box>
 
                     {/* Right Icons*/}

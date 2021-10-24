@@ -9,13 +9,13 @@ const HeadingWithDescription = ({description,heading, sx, headingLeft, ...props}
         }} {...props}>
             <Typography fontWeight={'bold'} mb={'1.5rem'}
                         textAlign={headingLeft ? 'left' : 'center'}
-                        variant={'h1'}
+                        variant={'h2'}
             >
                 {heading}
             </Typography>
             {
                 description.map(desc => (
-                    <Typography sx={{mb: '1rem'}} gutterBottom variant={'body1'}>
+                    <Typography sx={{mb: '1rem',fontSize: '1.5rem'}} gutterBottom variant={'body1'}>
                         {desc}
                     </Typography>
                 ))

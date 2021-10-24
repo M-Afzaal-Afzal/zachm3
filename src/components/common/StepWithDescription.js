@@ -3,7 +3,12 @@ import {Box, Chip, Typography} from "@mui/material";
 
 const StepWithDescription = ({heading,description}) => {
     return (
-        <Box>
+        <Box  sx={{
+            display: 'grid',
+            gridTemplateColumns: 'auto 1fr',
+            alignItems: 'center',
+            gridGap: '3rem',
+        }}>
             <Box py={'.5rem'}>
                 <Chip
                     size={'medium'}
@@ -13,9 +18,9 @@ const StepWithDescription = ({heading,description}) => {
                 />
             </Box>
             <Typography
-                sx={{
-                    mb: '.5rem',
-                }}
+                // sx={{
+                //     mb: '.5rem',
+                // }}
                 color={'#fff'}
                 variant={'body1'}
             >

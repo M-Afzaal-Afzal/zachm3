@@ -34,15 +34,6 @@ const TeamsSection = () => {
                 'Wanted for clowning on Juggalos',
             ],
         },
-        {
-            name: 'Steamedbun',
-            imgSrc: '/home/4.jpeg',
-            isWanted: false,
-            description: [
-                'Artist, Design Whiz, Undercover Memelord',
-                'Wanted for clowning on Juggalos',
-            ],
-        },
     ]
 
     return (
