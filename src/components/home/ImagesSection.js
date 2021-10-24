@@ -51,7 +51,7 @@ const ImagesSection = () => {
                 </SwiperSlide>
                 <SwiperSlide className={'swiper-slide'}> <Box
                     sx={{width:imageSize,margin: '4px', height: imageSize, position: 'relative'}}>
-                    <Image priority src={'/home/6.jpg'} layout={'fill'} objectFit={'cover'}/>
+                    <Image priority src={'/home/6.png'} layout={'fill'} objectFit={'cover'}/>
                 </Box>
                 </SwiperSlide>
                 <SwiperSlide className={'swiper-slide'}>
