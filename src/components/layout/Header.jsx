@@ -124,12 +124,15 @@ const Header = () => {
                             </Stack>
 
                             {/*    Right Icons*/}
-                            <Box>
+                            <Box sx={{
+                                display: 'flex',
+                                alignItems: 'center',
+                            }}>
                                 {/* Icons buttons on large screen*/}
 
                                 <Stack sx={{
                                     display: {
-                                        xs: 'none',
+                                        // xs: 'none',
                                         xl: 'block',
                                     }
                                 }} direction={'row'} spacing={.5}>
