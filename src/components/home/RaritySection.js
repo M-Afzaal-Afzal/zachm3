@@ -44,7 +44,7 @@ const RaritySection = () => {
                                 minHeight: '30rem',
                                 height: '100%',
                             }}>
-                                <Image src={'/home/rarity_special.png'}
+                                <Image src={'/home/cartoon.gif'}
                                        layout={'fill'}
                                        objectFit={'contain'}
                                 />
